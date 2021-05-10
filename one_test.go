@@ -17,3 +17,10 @@ func TestDivisor(t *testing.T) {
 	Equal(t, Divisors(12), 6)
 	Equal(t, Divisors(30), 8)
 }
+
+func TestDigPow(t *testing.T) {
+	Equal(t, DigPow(89, 1), 1)
+	Equal(t, DigPow(92, 1), -1)
+	Equal(t, DigPow(695, 2), 2)
+	Equal(t, DigPow(46288, 3), 51)
+}
