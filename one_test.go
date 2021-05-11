@@ -24,3 +24,11 @@ func TestDigPow(t *testing.T) {
 	Equal(t, DigPow(695, 2), 2)
 	Equal(t, DigPow(46288, 3), 51)
 }
+
+func TestSplitString(t *testing.T) {
+	Equal(t, SplitStrings("abc"), []string{"ab", "c_"})
+	Equal(t, SplitStrings("a"), []string{"a_"})
+	Equal(t, SplitStrings("dawsd"), []string{"da", "ws", "d_"})
+	Equal(t, SplitStrings("awsaws"), []string{"aw", "sa", "ws"})
+	Equal(t, SplitStrings("普通话"), []string{"普通", "话_"})
+}
