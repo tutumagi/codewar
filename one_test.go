@@ -32,3 +32,11 @@ func TestSplitString(t *testing.T) {
 	Equal(t, SplitStrings("awsaws"), []string{"aw", "sa", "ws"})
 	Equal(t, SplitStrings("普通话"), []string{"普通", "话_"})
 }
+
+func TestMakeTheDeadfishSwim(t *testing.T) {
+	Equal(t, MakeTheDeadfishSwim("ooo"), []int{0, 0, 0})
+	Equal(t, MakeTheDeadfishSwim("ioioio"), []int{1, 2, 3})
+	Equal(t, MakeTheDeadfishSwim("idoiido"), []int{0, 1})
+	Equal(t, MakeTheDeadfishSwim("isoisoiso"), []int{1, 4, 25})
+	Equal(t, MakeTheDeadfishSwim("codewars"), []int{0})
+}
