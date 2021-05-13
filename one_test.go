@@ -47,3 +47,16 @@ func TestForWeight(t *testing.T) {
 	Equal(t, OrderWeight(" "), "")
 	Equal(t, OrderWeight("333333 "), "333333")
 }
+
+func TestConsonantValue(t *testing.T) {
+	Equal(t, ConsonantValue("a"), (0))
+	Equal(t, ConsonantValue("bcd"), (9))
+	Equal(t, ConsonantValue("zea"), (26))
+	Equal(t, ConsonantValue("az"), (26))
+	Equal(t, ConsonantValue("baz"), (26))
+	Equal(t, ConsonantValue("aeiou"), (0))
+	Equal(t, ConsonantValue("uaoczei"), (29))
+	Equal(t, ConsonantValue("abababababfapeifapefijaefaepfjavnefjnfbhwyfnjsifjapnes"), (143))
+	Equal(t, ConsonantValue("codewars"), (37))
+	Equal(t, ConsonantValue("bup"), (16))
+}
