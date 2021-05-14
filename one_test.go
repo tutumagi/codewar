@@ -60,3 +60,20 @@ func TestConsonantValue(t *testing.T) {
 	Equal(t, ConsonantValue("codewars"), (37))
 	Equal(t, ConsonantValue("bup"), (16))
 }
+
+func TestFistNonRepeating(t *testing.T) {
+	Equal(t, FirstNonRepeating("a"), "a")
+	Equal(t, FirstNonRepeating("stress"), "t")
+	Equal(t, FirstNonRepeating("moonmen"), "e")
+
+	Equal(t, FirstNonRepeating(""), "")
+
+	Equal(t, FirstNonRepeating("abba"), "")
+	Equal(t, FirstNonRepeating("aa"), "")
+
+	Equal(t, FirstNonRepeating("~><#~><"), "#")
+	Equal(t, FirstNonRepeating("hello world, eh?"), "w")
+
+	Equal(t, FirstNonRepeating("sTreSS"), "T")
+	Equal(t, FirstNonRepeating("Go hang a salami, I'm a lasagna hog!"), ",")
+}
