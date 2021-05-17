@@ -86,3 +86,10 @@ func TestMultiple3And5(t *testing.T) {
 	// 5,10,(15),20,25 = 60
 	Equal(t, Multiple3And5(30), 195)
 }
+
+func TestValidParentheses(t *testing.T) {
+	Equal(t, ValidParentheses("()"), true)
+	Equal(t, ValidParentheses(")(()))"), false)
+	Equal(t, ValidParentheses("("), false)
+	Equal(t, ValidParentheses("(())((()())())"), true)
+}
