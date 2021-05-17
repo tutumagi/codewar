@@ -77,3 +77,12 @@ func TestFistNonRepeating(t *testing.T) {
 	Equal(t, FirstNonRepeating("sTreSS"), "T")
 	Equal(t, FirstNonRepeating("Go hang a salami, I'm a lasagna hog!"), ",")
 }
+
+func TestMultiple3And5(t *testing.T) {
+	Equal(t, Multiple3And5(10), 23)
+
+	// 测试30
+	// 3,6,9,12,15,18,21,24,27 = 135
+	// 5,10,(15),20,25 = 60
+	Equal(t, Multiple3And5(30), 195)
+}
