@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 
 	. "github.com/go-playground/assert/v2"
@@ -92,4 +93,19 @@ func TestValidParentheses(t *testing.T) {
 	Equal(t, ValidParentheses(")(()))"), false)
 	Equal(t, ValidParentheses("("), false)
 	Equal(t, ValidParentheses("(())((()())())"), true)
+}
+
+func TestCreateSpiral(t *testing.T) {
+	for n := 0; n < 7; n++ {
+		t.Run(fmt.Sprintf("n=%d", n), func(t *testing.T) {
+			ret := CreateSpiral(n)
+			for i := 0; i < n; i++ {
+				for j := 0; j < n; j++ {
+					fmt.Print(ret[i][j])
+					fmt.Print(",")
+				}
+				fmt.Println()
+			}
+		})
+	}
 }
