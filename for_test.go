@@ -109,3 +109,10 @@ func TestCreateSpiral(t *testing.T) {
 		})
 	}
 }
+
+func TestDuplicate_count(t *testing.T) {
+	Equal(t, duplicate_count("abcde"), 0)
+	Equal(t, duplicate_count("abcdea"), 1)
+	Equal(t, duplicate_count("abcdeaB11"), 3)
+	Equal(t, duplicate_count("indivisibility"), 1)
+}
