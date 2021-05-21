@@ -116,3 +116,31 @@ func TestDuplicate_count(t *testing.T) {
 	Equal(t, duplicate_count("abcdeaB11"), 3)
 	Equal(t, duplicate_count("indivisibility"), 1)
 }
+
+func TestFirstVariationonCaesarCipher(t *testing.T) {
+	{
+		var sol = []string{"T p", "oc ", "iwl", "yo", ""}
+		var u = "S mkx bocod"
+		Equal(t, MovingShift(u, 1), sol)
+
+		Equal(t, DemovingShift(sol, 1), u)
+
+	}
+
+	{
+		var sol = []string{"J vltasl rlhr ", "zdfog odxr ypw", " atasl rlhr p ", "gwkzzyq zntyhv", " lvz wp!!!"}
+		var u = "I should have known that you would have a perfect answer for me!!!"
+
+		Equal(t, MovingShift(u, 1), sol)
+
+		Equal(t, DemovingShift(sol, 1), u)
+	}
+
+	{
+		var u = "I should have known that you would have a perfect answer for me!!!"
+		var sol = []string{"J vltasl rlhr ", "zdfog odxr ypw", " atasl rlhr p ", "gwkzzyq zntyhv", " lvz wp!!!"}
+
+		Equal(t, MovingShift(u, 1), sol)
+		Equal(t, DemovingShift(sol, 1), u)
+	}
+}
