@@ -144,3 +144,10 @@ func TestFirstVariationonCaesarCipher(t *testing.T) {
 		Equal(t, DemovingShift(sol, 1), u)
 	}
 }
+
+func TestPartitions(t *testing.T) {
+	Equal(t, Partitions(1), 1)
+	Equal(t, Partitions(5), 7)
+	Equal(t, Partitions(10), 42)
+	Equal(t, Partitions(25), 1958)
+}
