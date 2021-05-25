@@ -151,3 +151,20 @@ func TestPartitions(t *testing.T) {
 	Equal(t, Partitions(10), 42)
 	Equal(t, Partitions(25), 1958)
 }
+
+func TestSmallestPossibleSum(t *testing.T) {
+	Equal(t, SmallestPossibleSum([]int{9}), 9)
+	Equal(t, SmallestPossibleSum([]int{6, 9, 21}), 9)
+	Equal(t, SmallestPossibleSum([]int{1, 21, 55}), 3)
+	Equal(t, SmallestPossibleSum([]int{4, 16, 24}), 12)
+
+	// count := 1000
+	// wanted := make([]int, count)
+	// for i := 0; i < count; i++ {
+	// 	wanted[i] = 100 * (i + 1)
+	// 	// wanted[i] = int(rand.Float32() * float32((i+1)*10))
+	// }
+
+	// Equal(t, SmallestPossibleSum(wanted), count)
+
+}
