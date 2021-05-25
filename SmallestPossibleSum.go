@@ -18,9 +18,3 @@ func gcd(a int, b int) int {
 	}
 	return a
 }
-
-type SortByInt []int
-
-func (a SortByInt) Len() int           { return len(a) }
-func (a SortByInt) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
-func (a SortByInt) Less(i, j int) bool { return a[i] < a[j] }
