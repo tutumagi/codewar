@@ -166,5 +166,33 @@ func TestSmallestPossibleSum(t *testing.T) {
 	// }
 
 	// Equal(t, SmallestPossibleSum(wanted), count)
+}
 
+func TestLastDigitWithHugeNumber(t *testing.T) {
+	t.Run("2 number", func(t *testing.T) {
+		Equal(t, LastDigitWithHugeNumber([]int{2, 1}), 2)
+		Equal(t, LastDigitWithHugeNumber([]int{2, 2}), 4)
+		Equal(t, LastDigitWithHugeNumber([]int{2, 3}), 8)
+		Equal(t, LastDigitWithHugeNumber([]int{2, 4}), 6)
+		Equal(t, LastDigitWithHugeNumber([]int{2, 5}), 2)
+		Equal(t, LastDigitWithHugeNumber([]int{2, 6}), 4)
+		Equal(t, LastDigitWithHugeNumber([]int{2, 7}), 8)
+		Equal(t, LastDigitWithHugeNumber([]int{2, 8}), 6)
+	})
+
+	t.Run("3 number", func(t *testing.T) {
+		Equal(t, LastDigitWithHugeNumber([]int{}), 1)
+		Equal(t, LastDigitWithHugeNumber([]int{0, 0}), 1)
+		Equal(t, LastDigitWithHugeNumber([]int{0, 0, 0}), 0)
+		Equal(t, LastDigitWithHugeNumber([]int{1, 2}), 1)
+		Equal(t, LastDigitWithHugeNumber([]int{3, 4, 5}), 1)
+		Equal(t, LastDigitWithHugeNumber([]int{4, 3, 6}), 4)
+		Equal(t, LastDigitWithHugeNumber([]int{7, 6, 21}), 1)
+		Equal(t, LastDigitWithHugeNumber([]int{12, 30, 21}), 6)
+		Equal(t, LastDigitWithHugeNumber([]int{2, 0, 1}), 1)
+		Equal(t, LastDigitWithHugeNumber([]int{2, 2, 2, 0}), 4)
+		Equal(t, LastDigitWithHugeNumber([]int{937640, 767456, 981242}), 0)
+		Equal(t, LastDigitWithHugeNumber([]int{123232, 694022, 140249}), 6)
+		Equal(t, LastDigitWithHugeNumber([]int{499942, 898102, 846073}), 6)
+	})
 }
